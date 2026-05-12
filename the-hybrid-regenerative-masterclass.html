@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events & News | Best Ever Medical</title>
+    <title>The Hybrid Regenerative Masterclass | Best Ever Medical</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,83 +87,67 @@
         body.menu-open .hamburger span:nth-child(2) { opacity: 0; }
         body.menu-open .hamburger span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
 
-        /* --- INNER PAGE HERO --- */
-        .inner-hero { background-color: var(--primary-dark); min-height: 35vh; margin-top: 75px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 60px 0; }
-        .inner-hero::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; opacity: 0.12; mix-blend-mode: overlay; pointer-events: none; z-index: 1; }
-        .inner-hero-container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 5vw; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 10; box-sizing: border-box; }
-        .inner-hero-eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--card-gold); margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; gap: 15px; opacity: 0; transform: translateY(20px); }
-        .inner-hero-eyebrow::before, .inner-hero-eyebrow::after { content: ''; display: block; width: 30px; height: 1px; background-color: var(--card-gold); opacity: 0.5; }
-        .inner-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 64px); line-height: 1.1; margin: 0 0 15px 0; font-weight: 400; letter-spacing: -0.02em; color: var(--white); opacity: 0; transform: translateY(20px); }
-        .inner-hero p { font-size: clamp(16px, 2vw, 18px); max-width: 600px; margin: 0; line-height: 1.6; color: rgba(255,255,255,0.85); font-weight: 300; opacity: 0; transform: translateY(20px); }
+        /* --- ARTICLE HERO (EDITORIAL STYLE) --- */
+        .article-hero { padding: 180px 5vw 60px 5vw; background-color: var(--bg-cream); position: relative; z-index: 10; }
+        .ah-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+        
+        .ah-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; }
+        .ah-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 6.5vw, 90px); line-height: 1.05; font-weight: 400; color: var(--text-dark); margin: 0; letter-spacing: -0.02em; flex: 1; max-width: 900px; opacity: 0; transform: translateY(30px); }
+        .ah-meta { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; text-align: right; opacity: 0; transform: translateY(30px); }
+        .ah-meta-author { font-size: 13px; font-weight: 700; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 1px; }
+        .ah-meta-date { font-size: 13px; font-weight: 500; color: #64748b; }
+        
+        .ah-image-wrap { width: 100%; height: 65vh; min-height: 400px; border-radius: 24px; overflow: hidden; position: relative; opacity: 0; transform: translateY(40px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .ah-image { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); }
 
-        /* --- NEWS & EVENTS SECTION (THANKS.CO EDITORIAL STYLE) --- */
-        .editorial-news-section {
-            padding: 80px 5vw 120px 5vw; background-color: var(--bg-cream); position: relative; z-index: 10;
+        /* --- ARTICLE CONTENT (CONSTRAINED WIDTH) --- */
+        .article-body { padding: 60px 5vw 120px 5vw; background-color: var(--bg-cream); position: relative; z-index: 10; }
+        .ab-container { max-width: 800px; margin: 0 auto; }
+        
+        /* Typography System for Article */
+        .ab-p { font-family: 'DM Sans', sans-serif; font-size: 19px; line-height: 1.8; color: #334155; font-weight: 400; margin: 0 0 30px 0; }
+        .ab-p:first-of-type { font-size: 22px; line-height: 1.6; color: var(--text-dark); font-weight: 300; } /* Intro paragraph emphasis */
+        
+        .ab-h3 { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: var(--primary-dark); margin: 60px 0 25px 0; line-height: 1.2; letter-spacing: -0.01em; }
+        
+        .ab-quote { 
+            position: relative; padding: 40px 0 40px 40px; margin: 60px 0; border-left: 2px solid var(--card-gold);
         }
-        .news-container { max-width: 1400px; margin: 0 auto; }
+        .ab-quote p { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 400; font-style: italic; color: var(--primary-dark); line-height: 1.25; margin: 0; letter-spacing: -0.01em; }
+        
+        .ab-ul { list-style: none; padding: 0; margin: 0 0 40px 0; }
+        .ab-ul li { font-size: 18px; line-height: 1.7; color: #475569; margin-bottom: 15px; padding-left: 24px; position: relative; }
+        .ab-ul li::before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary); }
+        .ab-ul li strong { color: var(--text-dark); font-weight: 600; }
 
-        /* Filters */
-        .news-filters { display: flex; gap: 15px; justify-content: center; margin-bottom: 80px; flex-wrap: wrap; border-bottom: 1px solid var(--border-color); padding-bottom: 30px;}
-        .filter-btn { background: transparent; border: none; color: #64748b; padding: 10px 20px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; position: relative;}
-        .filter-btn:hover { color: var(--primary-dark); }
-        .filter-btn.active { color: var(--primary-dark); font-weight: 700; }
-        .filter-btn.active::after { content: ''; position: absolute; bottom: -31px; left: 0; width: 100%; height: 2px; background-color: var(--primary-dark); }
+        /* Custom Event Details Box */
+        .event-box { background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; margin: 60px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.02); display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .eb-item { display: flex; flex-direction: column; gap: 8px; }
+        .eb-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; }
+        .eb-val { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; color: var(--text-dark); }
+        .eb-full { grid-column: 1 / -1; }
 
-        /* Article Card Base */
-        .article-card {
-            display: flex; flex-direction: column; text-decoration: none; color: inherit; cursor: pointer;
-            opacity: 0; transform: translateY(30px); /* For GSAP Entrance */
-            will-change: opacity, transform;
-        }
-        .article-img-wrap {
-            width: 100%; border-radius: 20px; overflow: hidden; position: relative; background: #e2e8f0; margin-bottom: 25px; transition: border-radius 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .article-img {
-            width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .article-card:hover .article-img-wrap { border-radius: 12px; } /* Subtle morph */
+        .ab-btn-wrap { margin-top: 60px; text-align: center; }
+        .ab-btn { display: inline-flex; align-items: center; justify-content: center; background: var(--primary-dark); color: var(--white); padding: 18px 40px; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; text-decoration: none; transition: all 0.3s ease; }
+        .ab-btn:hover { background: var(--primary); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(25, 123, 71, 0.2); }
+
+        /* --- FURTHER READING (RELATED POSTS) --- */
+        .related-section { padding: 100px 5vw; background: var(--white); border-top: 1px solid var(--border-color); }
+        .rs-container { max-width: 1400px; margin: 0 auto; }
+        .rs-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 64px); font-weight: 400; color: var(--text-dark); margin: 0 0 60px 0; text-align: center; letter-spacing: -0.02em; }
+        
+        .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5vw; }
+        .article-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; cursor: pointer; }
+        .article-img-wrap { width: 100%; height: 280px; border-radius: 20px; overflow: hidden; position: relative; background: #e2e8f0; margin-bottom: 25px; transition: border-radius 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+        .article-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .article-card:hover .article-img-wrap { border-radius: 12px; }
         .article-card:hover .article-img { transform: scale(1.05); }
         
-        .article-meta {
-            display: flex; align-items: center; gap: 15px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 15px;
-        }
+        .article-meta { display: flex; align-items: center; gap: 15px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 15px; }
         .article-meta .cat-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--card-gold); }
-        
-        .article-title {
-            font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 36px); line-height: 1.15; font-weight: 400; color: var(--text-dark); margin: 0 0 15px 0; letter-spacing: -0.01em; transition: color 0.3s ease;
-        }
+        .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 2vw, 28px); line-height: 1.15; font-weight: 500; color: var(--text-dark); margin: 0 0 15px 0; letter-spacing: -0.01em; transition: color 0.3s ease; }
         .article-card:hover .article-title { color: var(--primary-dark); }
-        
-        .article-excerpt {
-            font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; color: #475569; margin: 0 0 20px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-        }
-
-        .article-read-more {
-            display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); transition: gap 0.3s ease;
-        }
-        .article-read-more svg { width: 16px; height: 16px; stroke: currentColor; transition: transform 0.3s ease; }
-        .article-card:hover .article-read-more { gap: 12px; }
-
-        /* FEATURED GRID (Top 2 Posts Side-by-Side) */
-        .featured-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 6vw; margin-bottom: 100px;
-        }
-        .featured-card .article-img-wrap { height: 420px; border-radius: 24px; }
-        .featured-card .article-title { font-size: clamp(32px, 4vw, 48px); margin-bottom: 20px; line-height: 1.1; }
-        .featured-card .article-excerpt { font-size: 18px; line-height: 1.6; -webkit-line-clamp: 3; }
-
-        /* REGULAR GRID Articles (3-Column Layout) */
-        .article-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 70px 3vw;
-        }
-        .article-grid .article-img-wrap { height: 260px; }
-        .article-grid .article-title { font-size: clamp(22px, 2vw, 28px); margin-bottom: 12px; }
-        .article-grid .article-excerpt { font-size: 15px; -webkit-line-clamp: 3; margin-bottom: 15px; }
-
-        /* Pagination */
-        .pagination { display: flex; justify-content: center; gap: 10px; margin-top: 100px; }
-        .page-num { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color); font-weight: 600; font-size: 14px; color: var(--text-dark); text-decoration: none; transition: all 0.3s ease; }
-        .page-num:hover, .page-num.active { background: var(--primary-dark); color: var(--white); border-color: var(--primary-dark); }
+        .article-excerpt { font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.6; color: #475569; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
         /* --- MEGA FOOTER --- */
         .mega-footer-block { background-color: var(--footer-bg); border-top-left-radius: 60px; border-top-right-radius: 60px; padding-top: 120px; position: relative; z-index: 95; color: var(--white); margin-top: -20px; overflow: hidden; }
@@ -208,16 +192,7 @@
             .mobile-menu-btn { display: block; }
             .header-btn, .nav-links { display: none; }
             
-            /* Mobile Menu Overrides synced from home-page */
-            .nav-links {
-                position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-                background: var(--bg-cream);
-                flex-direction: column; padding: 120px 5vw 40px 5vw; gap: 0;
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-                transition: clip-path 0.6s cubic-bezier(0.77, 0, 0.175, 1);
-                align-items: flex-start; justify-content: flex-start;
-                overflow-y: auto; z-index: 100; box-sizing: border-box;
-            }
+            .nav-links { display: flex !important; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: var(--bg-cream); flex-direction: column; padding: 120px 5vw 40px 5vw; gap: 0; clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); transition: clip-path 0.6s cubic-bezier(0.77, 0, 0.175, 1); align-items: flex-start; justify-content: flex-start; overflow-y: auto; z-index: 100; box-sizing: border-box; }
             .nav-links.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
             .nav-item { width: 100%; height: auto; flex-direction: column; align-items: flex-start; border-bottom: 1px solid rgba(0,0,0,0.05); }
             .nav-item > a { width: 100%; color: var(--text-dark) !important; font-family: 'Cormorant Garamond', serif; font-size: 28px; padding: 24px 0; justify-content: space-between; box-sizing: border-box; }
@@ -225,24 +200,16 @@
             .nav-item > a svg { width: 24px; height: 24px; transition: transform 0.3s ease; }
             .nav-item.active > a svg { transform: rotate(180deg); color: var(--primary); }
             
-            .mega-menu {
-                position: static !important; transform: none !important; box-shadow: none !important; border: none !important; background: transparent !important; width: 100% !important;
-                padding: 0 0 0 15px !important; display: flex !important; flex-direction: column !important; gap: 15px !important; max-height: 0 !important; opacity: 0 !important;
-                visibility: hidden !important; pointer-events: none !important; overflow: hidden !important; transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0.4s !important; box-sizing: border-box;
-            }
+            .mega-menu { position: static !important; transform: none !important; box-shadow: none !important; border: none !important; background: transparent !important; width: 100% !important; padding: 0 0 0 15px !important; display: flex !important; flex-direction: column !important; gap: 15px !important; max-height: 0 !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; overflow: hidden !important; transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0.4s !important; box-sizing: border-box; }
             .nav-item.active .mega-menu { max-height: 600px !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; padding-bottom: 24px !important; }
             .mega-link { padding: 0; }
             .mega-link strong { font-size: 18px; color: var(--text-dark); font-weight: 500; font-family: 'DM Sans', sans-serif;}
             .mega-link span { display: none; }
 
-            /* News Mobile */
-            .editorial-news-section { padding: 60px 5vw; }
-            .featured-grid { grid-template-columns: 1fr; gap: 60px; margin-bottom: 60px; }
-            .featured-card .article-img-wrap { height: 400px; }
+            .ah-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .ah-meta { text-align: left; }
             
-            /* Tablet 3-col scales to 2-col */
-            .article-grid { grid-template-columns: repeat(2, 1fr); gap: 60px 4vw; }
-            .article-grid .article-img-wrap { height: 280px; }
+            .article-grid { grid-template-columns: repeat(2, 1fr); gap: 6vw; }
 
             .mega-footer-block { padding-top: 80px; border-top-left-radius: 40px; border-top-right-radius: 40px; }
             .form-group { flex: 1 1 100%; } 
@@ -252,16 +219,15 @@
             .bottom-legal { flex-direction: column; gap: 15px; }
         }
         @media (max-width: 768px) {
-            .news-filters { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 10px; }
-            .news-filters::-webkit-scrollbar { display: none; }
-            .filter-btn { flex-shrink: 0; white-space: nowrap; }
-            
-            .featured-card .article-title { font-size: clamp(28px, 8vw, 36px); }
-            .featured-card .article-img-wrap { height: 300px; }
-            
-            /* Mobile 2-col scales to 1-col */
+            .article-hero { padding: 140px 5vw 40px 5vw; }
+            .ah-image-wrap { height: 40vh; min-height: 300px; }
+            .article-body { padding: 40px 5vw 80px 5vw; }
+            .ab-p { font-size: 17px; }
+            .ab-h3 { font-size: 32px; }
+            .event-box { grid-template-columns: 1fr; padding: 25px; gap: 20px; }
+            .eb-full { grid-column: auto; }
             .article-grid { grid-template-columns: 1fr; gap: 50px; }
-            .article-grid .article-img-wrap { height: 260px; }
+            .article-img-wrap { height: 260px; }
         }
     </style>
 </head>
@@ -270,6 +236,7 @@
     <div class="preloader"><div class="preloader-logo-wrap"><img src="https://bestevermeds.com/wp-content/uploads/2025/05/Best-Ever-Med-Logo.png" alt="BEM" class="preloader-logo"></div></div>
     <div class="custom-cursor"></div>
 
+    <!-- HEADER WITH MEGA MENU -->
     <div class="header-wrapper">
         <div class="floating-header">
             <a href="index.html" class="logo"><img src="https://bestevermeds.com/wp-content/uploads/2025/05/Best-Ever-Med-Logo.png" alt="BEM" class="brand-logo-img"></a>
@@ -300,152 +267,122 @@
             <a href="#contact" class="header-btn">Inquire for Wholesale</a>
         </div>
     </div>
-    
-    <!-- INNER PAGE HERO -->
-    <div class="inner-hero">
-        <div class="inner-hero-container">
-            <div class="inner-hero-eyebrow">Insights & Education</div>
-            <h1>Events & News</h1>
-            <p>Stay updated with our latest masterclasses, clinical breakthroughs, and company announcements driving Myanmar's aesthetic industry forward.</p>
-        </div>
-    </div>
 
-    <!-- EDITORIAL NEWS SECTION -->
-    <section class="editorial-news-section">
-        <div class="news-container">
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="ah-container">
+            <div class="ah-header">
+                <h1 class="ah-title rv-anim">The Hybrid Regenerative Masterclass</h1>
+                <div class="ah-meta rv-anim">
+                    <span class="ah-meta-author">Dr. Suchut Tingratanasuwan</span>
+                    <span class="ah-meta-date">May 20, 2026</span>
+                </div>
+            </div>
             
-            <div class="news-filters">
-                <button class="filter-btn active" data-filter="all">All Articles</button>
-                <button class="filter-btn" data-filter="masterclass">Masterclasses</button>
-                <button class="filter-btn" data-filter="news">Company News</button>
-                <button class="filter-btn" data-filter="clinical">Clinical Updates</button>
+            <div class="ah-image-wrap rv-anim">
+                <img src="https://newmenweb.com/images/The-Hybrid-Regenerative-Master-Class.webp" alt="The Hybrid Regenerative Master Class" class="ah-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+        <div class="ab-container">
+            <p class="ab-p rv-anim">Unlock the Synergy of Structural Volume & Bio-Stimulation. Are you ready to move beyond traditional fillers?</p>
+            
+            <p class="ab-p rv-anim">Through this highly anticipated session, you will gain the confidence to treat complex aging signs using the advanced LSR (Linear-Subcision & Rejuvenation) technique.</p>
+            
+            <div class="ab-quote rv-anim">
+                <p>"True rejuvenation isn't just about adding volume; it's about restoring the skin's biological youth."</p>
             </div>
 
-            <!-- FEATURED GRID (Thanks.co Awwwards Layout: 2 Posts Side-by-Side) -->
-            <div class="featured-grid" id="featured-grid">
-                
-                <a href="the-hybrid-regenerative-masterclass.html" class="article-card featured-card js-article" data-category="masterclass">
-                    <div class="article-img-wrap">
-                        <img src="https://newmenweb.com/images/The-Hybrid-Regenerative-Master-Class.webp" alt="The Hybrid Regenerative Master Class" class="article-img">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Masterclass</span>
-                            <span class="cat-dot"></span>
-                            <span>May 20, 2026</span>
-                        </div>
-                        <h2 class="article-title">The Hybrid Regenerative Master Class by Dr. Suchut</h2>
-                        <p class="article-excerpt">Join us for an exclusive, hands-on masterclass led by global aesthetic expert Dr. Suchut. Discover advanced hybrid techniques combining biostimulators and exosomes to achieve unprecedented cellular regeneration and structural lifting results for your patients.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                    </div>
-                </a>
+            <p class="ab-p rv-anim">This intensive masterclass is designed to help you master the "Hybrid Approach"—combining the immediate, structural results of Ultra V Fillers with the long-term, regenerative power of UltraCol 100 & 200.</p>
 
-                <a href="massh-2026-congress.html" class="article-card featured-card js-article" data-category="news">
-                    <div class="article-img-wrap">
-                        <img src="https://newmenweb.com/images/MSAAH-Congress-2026.webp" alt="MSAAH 2026 Congress" class="article-img">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Company News</span>
-                            <span class="cat-dot"></span>
-                            <span>May 05, 2026</span>
-                        </div>
-                        <h2 class="article-title">MSAAH 2026 Congress: Innovative global trends in Aesthetic Medicine</h2>
-                        <p class="article-excerpt">Best Ever Medical proudly sponsored and participated in the MSAAH 2026 Congress. We showcased the latest in anti-aging, hair restoration, and next-generation dermal filler technology to Myanmar's leading aesthetic practitioners.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                    </div>
-                </a>
+            <h3 class="ab-h3 rv-anim">What You Will Master</h3>
+            <ul class="ab-ul rv-anim">
+                <li><strong>Structural Support:</strong> Creating a firm foundation with Ultra V Fillers.</li>
+                <li><strong>Bio-Stimulation:</strong> Triggering long-term collagen production with UltraCol.</li>
+                <li><strong>The LSR Technique:</strong> Master the art of subcision and linear delivery to address deep folds and skin laxity simultaneously.</li>
+            </ul>
 
+            <div class="event-box rv-anim">
+                <div class="eb-item">
+                    <span class="eb-lbl">Date</span>
+                    <span class="eb-val">20th May 2026</span>
+                </div>
+                <div class="eb-item">
+                    <span class="eb-lbl">Time</span>
+                    <span class="eb-val">9:00am - 5:30pm</span>
+                </div>
+                <div class="eb-item">
+                    <span class="eb-lbl">Location</span>
+                    <span class="eb-val">Yangon, Myanmar</span>
+                </div>
+                <div class="eb-item">
+                    <span class="eb-lbl">Certification</span>
+                    <span class="eb-val">Awarded upon completion</span>
+                </div>
+                <div class="eb-item eb-full">
+                    <span class="eb-lbl">Master Trainer</span>
+                    <span class="eb-val">Dr. Suchut Tingratanasuwan (Ultra V Thailand)</span>
+                </div>
             </div>
 
-            <!-- REGULAR POST GRID (3-Column Layout) -->
+            <div class="ab-btn-wrap rv-anim">
+                <a href="#contact" class="ab-btn">Register for Masterclass</a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- FURTHER READING (RELATED POSTS) -->
+    <section class="related-section">
+        <div class="rs-container">
+            <h2 class="rs-title rv-anim">Further Reading</h2>
+            
             <div class="article-grid">
-
-                <a href="#" class="article-card js-article" data-category="masterclass">
+                <!-- Post 1 -->
+                <a href="#" class="article-card rv-anim">
                     <div class="article-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop" alt="Advanced PDO Thread Lifting Techniques Workshop" class="article-img">
+                        <img src="https://newmenweb.com/images/MSAAH-Congress-2026.webp" alt="MSAAH Congress" class="article-img">
                     </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Masterclass</span>
-                            <span class="cat-dot"></span>
-                            <span>April 15, 2026</span>
-                        </div>
-                        <h3 class="article-title">Advanced PDO Thread Lifting Techniques</h3>
-                        <p class="article-excerpt">Our recent intensive workshop focused on mastering deep SMAS placement using Ultra V Hard cog threads. Attendees learned advanced vectoring strategies for dramatic, non-surgical facial contouring and V-line lifting.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
+                    <div class="article-meta">
+                        <span>Company News</span>
+                        <span class="cat-dot"></span>
+                        <span>May 05, 2026</span>
                     </div>
+                    <h3 class="article-title">MSAAH 2026 Congress: Innovative Trends</h3>
+                    <p class="article-excerpt">Best Ever Medical proudly sponsored and participated in the MSAAH 2026 Congress, showcasing the latest in anti-aging and dermal filler technology.</p>
                 </a>
 
-                <a href="#" class="article-card js-article" data-category="clinical">
+                <!-- Post 2 -->
+                <a href="#" class="article-card rv-anim">
                     <div class="article-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1200&auto=format&fit=crop" alt="The Science of Exosomes" class="article-img">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop" alt="PDO Thread Workshop" class="article-img">
                     </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Clinical Updates</span>
-                            <span class="cat-dot"></span>
-                            <span>March 28, 2026</span>
-                        </div>
-                        <h3 class="article-title">The Science of Exosomes: Next-Gen Repair</h3>
-                        <p class="article-excerpt">Explore the clinical data behind Regenbogen Exoxe. Learn how 6 billion pure exosomes are revolutionizing both skin rejuvenation and hair restoration by accelerating tissue repair at a cellular level without the risks of PRP.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
+                    <div class="article-meta">
+                        <span>Masterclass</span>
+                        <span class="cat-dot"></span>
+                        <span>April 15, 2026</span>
                     </div>
+                    <h3 class="article-title">Advanced PDO Thread Lifting Workshop</h3>
+                    <p class="article-excerpt">Our recent intensive workshop focused on mastering deep SMAS placement using Ultra V Hard cog threads for dramatic facial contouring.</p>
                 </a>
 
-                <a href="#" class="article-card js-article" data-category="news">
+                <!-- Post 3 -->
+                <a href="#" class="article-card rv-anim">
                     <div class="article-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop" alt="JDBio Partnership" class="article-img">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1200&auto=format&fit=crop" alt="Exosomes Science" class="article-img">
                     </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Company News</span>
-                            <span class="cat-dot"></span>
-                            <span>March 10, 2026</span>
-                        </div>
-                        <h3 class="article-title">BEM Partners with JDBio for Jade Series</h3>
-                        <p class="article-excerpt">We are thrilled to announce our exclusive partnership with JDBio to distribute Jade Face and Jade Body lipolytic solutions across Myanmar. This addition expands our portfolio into premium, natural fat-reduction treatments.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
+                    <div class="article-meta">
+                        <span>Clinical Updates</span>
+                        <span class="cat-dot"></span>
+                        <span>March 28, 2026</span>
                     </div>
+                    <h3 class="article-title">The Science of Exosomes: Cellular Repair</h3>
+                    <p class="article-excerpt">Explore the clinical data behind Regenbogen Exoxe. Learn how pure exosomes are revolutionizing both skin rejuvenation and hair restoration.</p>
                 </a>
-
-                <a href="#" class="article-card js-article" data-category="clinical">
-                    <div class="article-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?q=80&w=1200&auto=format&fit=crop" alt="Clinical Efficacy of PN 2.5" class="article-img">
-                    </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span>Clinical Updates</span>
-                            <span class="cat-dot"></span>
-                            <span>February 22, 2026</span>
-                        </div>
-                        <h3 class="article-title">Clinical Efficacy of PN 2.5 Regeneration</h3>
-                        <p class="article-excerpt">A deep dive into the polynucleotide matrix of Richesse PN 2.5. Clinical studies demonstrate how highly purified salmon DNA stimulates fibroblast activity, resulting in significantly enhanced skin elasticity and deep hydration.</p>
-                        <div class="article-read-more">
-                            Read Article <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                    </div>
-                </a>
-
             </div>
-
-            <!-- PAGINATION -->
-            <div class="pagination">
-                <a href="#" class="page-num active">1</a>
-                <a href="#" class="page-num">2</a>
-                <a href="#" class="page-num">3</a>
-            </div>
-
         </div>
     </section>
 
@@ -518,16 +455,16 @@
                 </div>
 
                 <div class="social-links-large">
-                    <a href="https://www.facebook.com/bestevermedical" target="_blank" class="social-link-l" aria-label="Facebook">
+                    <a href="https://www.facebook.com/bestevermedical" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/bestevermedical/" target="_blank" class="social-link-l" aria-label="Instagram">
+                    <a href="https://www.instagram.com/bestevermedical/" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.181a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
                     </a>
-                    <a href="https://www.youtube.com/@BESTEVERMEDICAL" target="_blank" class="social-link-l" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@BESTEVERMEDICAL" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
-                    <a href="https://invite.viber.com/?g2=AQA1QejPZOfx9FOZbVg5N6gCd1ry5mbr7qP4%2FGfHbo1EZkjj2LKGnU2MPgk3Q7ce" target="_blank" class="social-link-l" aria-label="Viber">
+                    <a href="https://invite.viber.com/?g2=AQA1QejPZOfx9FOZbVg5N6gCd1ry5mbr7qP4%2FGfHbo1EZkjj2LKGnU2MPgk3Q7ce" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M21.328 10.36A10.875 10.875 0 0 0 12.062 1.1C6.012 1.1 1.1 6.012 1.1 12.062c0 2.278.683 4.407 1.865 6.182-1.082 3.14-1.05 3.056-1.144 3.428-.158.625.39.957.942.748l3.655-1.378c1.7.943 3.633 1.483 5.644 1.483 6.05 0 10.962-4.912 10.962-10.962a10.875 10.875 0 0 0-1.696-5.203zm-4.717 6.643c-.45.498-1.083.567-1.52.548-1.564-.066-3.83-1.056-5.836-3.064-2.007-2.008-2.99-4.272-3.064-5.837-.02-.436.05-.1082.547-1.52.176-.194.472-.25.704-.132l1.63 1.13c.2.14.286.41.196.642l-.443 1.136c-.1.256-.052.546.126.757l2.124 2.124c.21.21.5.258.756.127l1.137-.442c.23-.09.5-.005.642.195l1.13 1.63c.118.232.062.528-.132.706zm-1.89-6.398c-1.306-1.305-3.04-1.785-3.04-1.785-.304-.076-.487-.38-.41-.685.075-.305.38-.488.684-.412 0 0 2.054.567 3.6 2.112 1.545 1.545 2.113 3.6 2.113 3.6.076.305-.108.61-.412.685-.305.076-.61-.108-.685-.41 0 0-.48-1.735-1.786-3.04l-.064-.065zm2.08-2.083c-2.455-2.454-5.717-3.355-5.717-3.355-.302-.076-.486-.38-.41-.685.075-.304.38-.487.685-.41 0 0 3.542.98 6.208 3.645 2.665 2.666 3.645 6.208 3.645 6.208.077.305-.106.61-.41.685-.306.076-.61-.108-.685-.41 0 0-.9-3.262-3.355-5.718l.04.04z"/></svg>
                     </a>
                 </div>
@@ -555,7 +492,7 @@
         .to('.preloader-logo', { y: -30, opacity: 0, duration: 0.8, ease: "power3.in" }, "+=0.3")
         .to('.preloader', { yPercent: -100, duration: 1.2, ease: "power4.inOut" }, "-=0.2")
         .to('.header-wrapper', { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.8")
-        .to('.inner-hero-eyebrow, .inner-hero h1, .inner-hero p', { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power3.out" }, "-=1.0");
+        .to('.rv-anim', { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: "power3.out" }, "-=1.0");
 
         // --- LENIS SMOOTH SCROLL ---
         const lenis = new Lenis({ duration: 1.2, smooth: true });
@@ -571,9 +508,22 @@
             cx += (mx - cx) * 0.2; cy += (my - cy) * 0.2;
             gsap.set(cursor, { x: cx, y: cy });
         });
-        document.querySelectorAll('a, button, .article-card').forEach(el => {
+        document.querySelectorAll('a, button').forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hover-active'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover-active'));
+        });
+
+        // --- HERO IMAGE PARALLAX ---
+        gsap.to('.ah-image', {
+            yPercent: 15, ease: "none",
+            scrollTrigger: { trigger: ".article-hero", start: "top top", end: "bottom top", scrub: true }
+        });
+
+        // --- SCROLL REVEALS ---
+        gsap.utils.toArray('.rv-anim').forEach(el => {
+            if(!el.closest('.ah-header') && !el.closest('.ah-image-wrap')){
+                gsap.from(el, { y: 40, opacity: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+            }
         });
 
         // --- MOBILE MENU LOGIC ---
@@ -608,72 +558,6 @@
                     }
                 });
             }
-        });
-
-        // --- SCROLL REVEALS ---
-        gsap.utils.toArray('.js-article').forEach(el => {
-            gsap.to(el, { y: 0, opacity: 1, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 85%" } });
-        });
-
-        // --- NEW GRID FILTERING LOGIC ---
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const articles = document.querySelectorAll('.js-article');
-        const featuredGrid = document.getElementById('featured-grid');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filterValue = btn.getAttribute('data-filter');
-
-                let visibleFeaturedCount = 0;
-
-                articles.forEach(article => {
-                    const isMatch = filterValue === 'all' || article.getAttribute('data-category') === filterValue;
-                    
-                    if (isMatch) {
-                        // Track if it's a featured item to handle the grid wrapper visibility
-                        if(article.closest('.featured-grid')) {
-                            visibleFeaturedCount++;
-                        }
-                        
-                        // Show item
-                        if(article.style.display === 'none' || article.style.display === '') {
-                            gsap.set(article, { display: "flex", opacity: 0, y: 20 });
-                        }
-                        gsap.to(article, { 
-                            opacity: 1, 
-                            y: 0, 
-                            duration: 0.4, 
-                            ease: "power2.out", 
-                            clearProps: "transform" 
-                        });
-                    } else {
-                        // Hide item
-                        gsap.to(article, { 
-                            opacity: 0, 
-                            y: 20, 
-                            duration: 0.3, 
-                            ease: "power2.in", 
-                            onComplete: () => {
-                                gsap.set(article, { display: "none" });
-                                ScrollTrigger.refresh();
-                            }
-                        });
-                    }
-                });
-                
-                // Safely collapse the featured grid wrapper if it's empty to prevent a 100px gap
-                if (featuredGrid) {
-                    if (visibleFeaturedCount === 0) {
-                        gsap.to(featuredGrid, { display: "none", duration: 0, delay: 0.3 });
-                    } else {
-                        gsap.set(featuredGrid, { display: "grid" });
-                    }
-                }
-                
-                setTimeout(() => { ScrollTrigger.refresh(); }, 400);
-            });
         });
 
         // --- ENTRANCE ANIMATIONS FOR FOOTER ---

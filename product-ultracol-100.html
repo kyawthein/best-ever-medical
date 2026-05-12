@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAD+ IV Therapy | Best Ever Medical</title>
+    <title>Ultracol 100 | Best Ever Medical</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -88,6 +88,7 @@
         body.menu-open .hamburger span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
 
         /* --- SINGLE PRODUCT HERO --- */
+        /* Updated padding and min-height to perfectly center the product */
         .sp-hero { min-height: 85vh; padding: 150px 5vw 80px 5vw; display: flex; align-items: center; position: relative; z-index: 10; max-width: 1400px; margin: 0 auto; }
         .sp-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; width: 100%; align-items: center; }
         
@@ -155,7 +156,7 @@
         .step-text { font-size: 18px; color: var(--text-dark); line-height: 1.6; padding-top: 0; font-weight: 300; }
         .step-text strong { color: var(--card-gold); font-weight: 600; font-size: 13px; display: block; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* --- BEFORE & AFTER GALLERY (Interactive) --- */
+        /* --- BEFORE & AFTER GALLERY (Phase 3 Interactive) --- */
         .sp-ba { padding: 100px 5vw; background: var(--white); position: relative; z-index: 10; }
         .ba-container { max-width: 1400px; margin: 0 auto; }
         .ba-header { text-align: center; margin-bottom: 80px; }
@@ -234,7 +235,6 @@
         .social-link-l:hover { background: rgba(255, 255, 255, 0.15); transform: translateY(-2px); }
         .social-link-l svg { width: 20px; height: 20px; fill: currentColor; }
         .footer-bottom { max-width: 1300px; margin: 100px auto 0 auto; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;}
-        .bottom-brand { display: flex; flex-direction: column; gap: 15px; }
         .bottom-brand p { margin: 0; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         .bottom-legal { display: flex; gap: 30px; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
         .bottom-legal a { color: inherit; text-decoration: none; transition: color 0.3s; }
@@ -243,11 +243,10 @@
 
         @media (max-width: 1024px) {
             .mobile-menu-btn { display: block; }
-            .header-btn, .nav-links { display: none; }
+            .header-btn { display: none; }
             
-            /* Mobile Menu Overrides synced from home-page */
+            /* Mobile Menu Overrides */
             .nav-links {
-                display: flex !important;
                 position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
                 background: var(--bg-cream);
                 flex-direction: column; padding: 120px 5vw 40px 5vw; gap: 0;
@@ -305,7 +304,6 @@
     <div class="preloader"><div class="preloader-logo-wrap"><img src="https://bestevermeds.com/wp-content/uploads/2025/05/Best-Ever-Med-Logo.png" alt="BEM" class="preloader-logo"></div></div>
     <div class="custom-cursor"></div>
 
-    <!-- HEADER WITH MEGA MENU -->
     <div class="header-wrapper">
         <div class="floating-header">
             <a href="index.html" class="logo"><img src="https://bestevermeds.com/wp-content/uploads/2025/05/Best-Ever-Med-Logo.png" alt="BEM" class="brand-logo-img"></a>
@@ -337,31 +335,31 @@
         </div>
     </div>
 
-    <!-- PRODUCT HERO: NAD+ THERAPY -->
+    <!-- PRODUCT HERO -->
     <section class="sp-hero">
         <div class="sp-hero-grid">
             <div class="sp-hero-left">
-                <span class="sp-brand rv-hero">US NAD</span>
-                <h1 class="sp-title rv-hero">NAD+ IV Therapy</h1>
-                <p class="sp-desc rv-hero">A premium FDA-approved intravenous infusion designed for powerful anti-aging, deep cellular repair, enhanced mental clarity, and restored vital energy.</p>
+                <span class="sp-brand rv-hero">Ultra V</span>
+                <h1 class="sp-title rv-hero">Ultracol 100</h1>
+                <p class="sp-desc rv-hero">Restore volume and rejuvenate skin by stimulating natural collagen production (Type I and III). The premier liquid PDO microsphere biostimulator.</p>
                 
                 <div class="sp-stats rv-hero">
                     <div class="stat-item">
                         <span class="stat-lbl">Category</span>
-                        <span class="stat-val">IV Therapy / Wellness</span>
+                        <span class="stat-val">Biostimulator</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-lbl">Key Ingredient</span>
-                        <span class="stat-val">Nicotinamide Adenine Dinucleotide</span>
+                        <span class="stat-val">100mg PDO</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-lbl">Duration</span>
-                        <span class="stat-val">Holistic Longevity</span>
+                        <span class="stat-val">Long-lasting Neo-genesis</span>
                     </div>
                 </div>
             </div>
             <div class="sp-hero-right">
-                <img src="https://newmenweb.com/images/NAD+IV-Therapy-myanmar.webp" class="sp-hero-img" alt="NAD+ IV Therapy">
+                <img src="https://newmenweb.com/images/UltraCol-100-myanmar.webp" class="sp-hero-img" alt="Ultracol 100 Box and Vial">
             </div>
         </div>
     </section>
@@ -371,19 +369,19 @@
         <div class="adv-grid">
             <div class="adv-item rv-up">
                 <div class="adv-icon">01</div>
-                <div class="adv-text">Cellular Energy<br>Boost</div>
+                <div class="adv-text">Type I & III<br>Collagen Synthesis</div>
             </div>
             <div class="adv-item rv-up">
                 <div class="adv-icon">02</div>
-                <div class="adv-text">Anti-Aging<br>& Repair</div>
+                <div class="adv-text">Natural Volume<br>Restoration</div>
             </div>
             <div class="adv-item rv-up">
                 <div class="adv-icon">03</div>
-                <div class="adv-text">Mental<br>Clarity</div>
+                <div class="adv-text">Safe PDO<br>Microspheres</div>
             </div>
             <div class="adv-item rv-up">
                 <div class="adv-icon">04</div>
-                <div class="adv-text">Fast<br>Absorption</div>
+                <div class="adv-text">Skin Texture<br>Rejuvenation</div>
             </div>
         </div>
     </section>
@@ -392,28 +390,28 @@
     <section class="sp-science">
         <div class="science-container">
             <div class="sci-header rv-up">
-                <h2>Advanced Coenzyme Replenishment</h2>
-                <p>NAD+ (Nicotinamide Adenine Dinucleotide) is a critical coenzyme found in every cell of your body. It plays a vital role in energy metabolism and maintaining DNA health. Our direct IV infusion bypasses the digestive system for 100% absorption, immediately fueling your cells and combating age-related decline.</p>
+                <h2>Advanced Formulation</h2>
+                <p>Ultracol 100 utilizes FDA-approved, biocompatible polymer technology to safely and effectively trigger the body's natural healing cascade, resulting in dense collagen neo-genesis.</p>
             </div>
             <div class="sci-grid">
                 <div class="sci-block rv-up">
-                    <h3>Core Technical Features</h3>
+                    <h3>Core Active Ingredients</h3>
                     <ul class="sci-list">
                         <li>
                             <span class="sci-list-num">01</span>
-                            100% Bioavailable NAD+ coenzyme
+                            100 mg Polydioxanone (PDO) Microspheres
                         </li>
                         <li>
                             <span class="sci-list-num">02</span>
-                            Bypasses GI tract for immediate cellular uptake
+                            High safety profile (used in surgical sutures for decades)
                         </li>
                         <li>
                             <span class="sci-list-num">03</span>
-                            Activates sirtuins (longevity proteins)
+                            Complete biodegradability via hydrolysis
                         </li>
                         <li>
                             <span class="sci-list-num">04</span>
-                            Promotes robust mitochondrial function and ATP production
+                            Non-antigenic and non-pyrogenic
                         </li>
                     </ul>
                 </div>
@@ -425,47 +423,47 @@
     <section class="sp-protocol">
         <div class="proto-container">
             <div class="proto-left">
-                <h2 class="rv-up">Clinical IV Protocol</h2>
-                <p class="rv-up">NAD+ IV Therapy is administered intravenously by a certified healthcare professional. The infusion rate is carefully monitored to ensure patient comfort and optimal absorption.</p>
+                <h2 class="rv-up">Clinical Protocols</h2>
+                <p class="rv-up">Ultracol 100 is designed for professional subdermal application. Precise reconstitution and injection techniques are vital for optimal collagen induction and patient safety.</p>
             </div>
             <div class="proto-right">
                 
                 <div class="proto-group">
-                    <h3 class="rv-up">Preparation & Dilution</h3>
+                    <h3 class="rv-up">Preparation & Reconstitution</h3>
                     <div class="step-list">
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Conduct a comprehensive medical consultation to determine the appropriate NAD+ dosage (typically 250mg to 500mg per session).</div>
+                            <div class="step-text">Mix the 100mg PDO vial with 4cc to 5cc of sterile water for injection (or Lidocaine depending on patient comfort protocol).</div>
                         </div>
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Prepare the sterile IV drip, mixing the highly purified NAD+ solution with normal saline.</div>
+                            <div class="step-text">Allow the mixture to sit for approximately 30 minutes to ensure complete hydration of the microspheres.</div>
                         </div>
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Secure a comfortable, relaxing setting for the patient, as the infusion process generally takes 1 to 2 hours.</div>
+                            <div class="step-text">Gently swirl the vial to create a smooth, homogenous suspension prior to drawing into the syringe.</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="proto-group" style="margin-top: 60px;">
-                    <h3 class="rv-up">Infusion Methodology</h3>
+                    <h3 class="rv-up">Injection Methodology</h3>
                     <div class="step-list" style="counter-reset: protocol-counter;">
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Insert the IV catheter using standard sterile clinical techniques and establish venous access.</div>
+                            <div class="step-text">Cleanse the treatment area and apply topical anesthetic if required.</div>
                         </div>
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Begin the infusion at a slow, controlled drip rate to allow the body to acclimate to the sudden influx of NAD+.</div>
+                            <div class="step-text">Using a 27G to 30G cannula, perform injections into the subdermal or deep dermal plane depending on the target area.</div>
                         </div>
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Monitor the patient for any signs of discomfort, such as slight chest tightness or nausea, adjusting the drip rate accordingly.</div>
+                            <div class="step-text">Utilize a fanning or retrograde linear threading technique to ensure even distribution of the PDO microspheres.</div>
                         </div>
                         <div class="step-card step-anim">
                             <div class="step-num"></div>
-                            <div class="step-text">Upon completion, safely remove the IV, apply a sterile bandage, and advise the patient to stay well-hydrated.</div>
+                            <div class="step-text">Gently massage the treated area post-injection to mold the suspension and prevent localized accumulation.</div>
                         </div>
                     </div>
                 </div>
@@ -484,7 +482,6 @@
                 
                 <div class="ba-card rv-up">
                     <div class="ba-slider">
-                        <!-- Using generic aesthetic placeholder -->
                         <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" alt="Before" class="ba-img before">
                         <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" alt="After" class="ba-img after">
                         <div class="ba-handle">
@@ -496,8 +493,8 @@
                         <span class="ba-tag tag-after">After</span>
                     </div>
                     <div class="ba-info">
-                        <h4>Systemic Rejuvenation</h4>
-                        <p>Restored Energy & Cellular Vitality</p>
+                        <h4>Full Face Rejuvenation</h4>
+                        <p>Restored Volume, Tone & Texture (After 12 Weeks)</p>
                     </div>
                 </div>
 
@@ -512,56 +509,56 @@
             
             <div class="faq-item rv-up">
                 <button class="faq-question">
-                    What does NAD+ actually do?
+                    How does Ultracol 100 differ from standard HA fillers?
                     <div class="faq-toggle">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                 </button>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer-inner">
-                        <p>It is essential for cellular energy (ATP) production and DNA repair. Levels drop as we age, leading to fatigue, slower recovery, and cognitive decline. IV therapy replenishes these levels instantly, bypassing the gut for immediate effect.</p>
+                        <p>Unlike Hyaluronic Acid (HA) fillers which immediately occupy space with a gel, Ultracol 100 acts as a biostimulator. It uses liquid PDO microspheres to trigger your body's natural fibroblast activity, resulting in genuine Type I and III collagen production for natural, lasting volume.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item rv-up">
                 <button class="faq-question">
-                    How long does an infusion session take?
+                    What is the recommended treatment schedule?
                     <div class="faq-toggle">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                 </button>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer-inner">
-                        <p>An NAD+ drip typically takes 1.5 to 2 hours. A slower drip rate is highly recommended to prevent temporary discomfort like nausea or a heavy feeling in the chest that can occur if administered too quickly.</p>
+                        <p>For optimal collagen induction, the standard clinical protocol recommends 3 sessions spaced approximately 4 weeks apart. Maintenance treatments can be performed every 6 to 12 months.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item rv-up">
                 <button class="faq-question">
-                    How many sessions do I need?
+                    When will patients see visible results?
                     <div class="faq-toggle">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                 </button>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer-inner">
-                        <p>For optimal anti-aging, cellular repair, and cognitive benefits, a loading protocol of 3 to 5 sessions over a 2-week period is often recommended, followed by a monthly maintenance drip.</p>
+                        <p>Patients may notice an initial plumpness immediately post-injection due to the carrier gel. However, the true biostimulatory effects—firmer, tighter, and more voluminous skin—become progressively visible after 4 to 6 weeks as new collagen is synthesized.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item rv-up">
                 <button class="faq-question">
-                    Are there any side effects?
+                    Is the treatment safe and what is the downtime?
                     <div class="faq-toggle">
                         <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                 </button>
                 <div class="faq-answer-wrapper">
                     <div class="faq-answer-inner">
-                        <p>Some patients may experience a temporary flushed feeling, slight nausea, or mild muscle cramps during the infusion. These sensations are completely normal and can be subsided immediately by simply slowing the IV drip rate.</p>
+                        <p>PDO is an incredibly safe, FDA-approved polymer that has been used in surgical sutures for over 30 years. The body fully metabolizes the microspheres into H2O and CO2. Downtime is minimal, typically restricted to mild swelling or bruising that resolves within a few days.</p>
                     </div>
                 </div>
             </div>
@@ -574,7 +571,7 @@
         <section class="cta-section">
             <div class="cta-container">
                 <h2 class="giant-cta-text">Book a call</h2>
-                <div class="cta-subtitle">Inquire about wholesale pricing and clinical training for NAD+ Therapy.</div>
+                <div class="cta-subtitle">Inquire about wholesale pricing and clinical training for Ultracol 100.</div>
                 
                 <form class="cta-form" id="contactForm">
                     <div class="form-group">
@@ -590,7 +587,7 @@
                         <input type="tel" name="phone" class="form-input" placeholder="Phone Number">
                     </div>
                     <div class="form-group full">
-                        <input type="text" name="message" class="form-input" placeholder="Inquire about NAD+ Therapy for your clinic.">
+                        <input type="text" name="message" class="form-input" placeholder="How many boxes of Ultracol 100 do you need?">
                     </div>
                     
                     <div class="submit-wrapper" style="display: flex; align-items: center; justify-content: flex-end; gap: 20px; width: 100%;">
@@ -638,13 +635,13 @@
                 </div>
 
                 <div class="social-links-large">
-                    <a href="https://www.facebook.com/bestevermedical" target="_blank" class="social-link-l" aria-label="Facebook">
+                    <a href="https://www.facebook.com/bestevermedical" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/bestevermedical/" target="_blank" class="social-link-l" aria-label="Instagram">
+                    <a href="https://www.instagram.com/bestevermedical/" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.181a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
                     </a>
-                    <a href="https://www.youtube.com/@BESTEVERMEDICAL" target="_blank" class="social-link-l" aria-label="YouTube">
+                    <a href="https://www.youtube.com/@BESTEVERMEDICAL" target="_blank" class="social-link-l">
                         <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
                     <a href="https://invite.viber.com/?g2=AQA1QejPZOfx9FOZbVg5N6gCd1ry5mbr7qP4%2FGfHbo1EZkjj2LKGnU2MPgk3Q7ce" target="_blank" class="social-link-l" aria-label="Viber">
@@ -654,16 +651,9 @@
             </div>
 
             <div class="footer-bottom">
-                <div class="bottom-brand">
-                    <p>Copyright &copy; 2026 Best Ever Medical.</p>
-                </div>
-                <div class="bottom-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                </div>
-                <div class="bottom-credit">
-                    Developed by <strong>Newmen Web Solutions</strong>
-                </div>
+                <div class="bottom-brand"><p>Copyright &copy; 2026 Best Ever Medical.</p></div>
+                <div class="bottom-legal"><a href="#">Privacy Policy</a> <a href="#">Terms & Conditions</a></div>
+                <div class="bottom-credit">Developed by <strong>Newmen Web Solutions</strong></div>
             </div>
         </footer>
     </div>
@@ -750,7 +740,7 @@
             }
         });
 
-        // --- INTERACTIVE B&A SLIDERS ---
+        // --- PHASE 3: INTERACTIVE B&A SLIDERS ---
         const baSliders = document.querySelectorAll('.ba-slider');
         baSliders.forEach(slider => {
             const afterImg = slider.querySelector('.ba-img.after');
