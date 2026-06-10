@@ -231,7 +231,7 @@
         }
         .about-content { 
             flex: 1; 
-            max-width: 600px; 
+            max-width: 850px; 
         }
         .section-eyebrow {
             font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--card-gold); margin-bottom: 25px; font-weight: 700; display: flex; align-items: center; gap: 15px;
@@ -294,7 +294,7 @@
         .btn-outline-light:hover { background-color: var(--white); color: #0c4d29; }
 
         /* --- THE BEM ADVANTAGE CARDS --- */
-        .why-bem-section { background-color: var(--bg-cream); padding: 120px 5vw; position: relative; }
+        .why-bem-section { background-color: var(--bg-cream); padding: 100px 5vw; position: relative; }
         .why-bem-header { text-align: center; margin-bottom: 40px; }
         .why-bem-header .trust-subtitle { margin-bottom: 10px; }
         .why-bem-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 400; color: var(--text-dark); margin: 15px 0 0 0; letter-spacing: -0.02em; }
@@ -357,7 +357,7 @@
         .drag-hint svg { width: 16px; height: 16px; stroke: currentColor; }
 
         /* --- NEWS & EVENTS SECTION --- */
-        .news-section { background-color: var(--bg-cream); padding: 120px 5vw; position: relative; }
+        .news-section { background-color: var(--bg-cream); padding: 100px 5vw; position: relative; }
         .news-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; max-width: 1300px; margin-left: auto; margin-right: auto; }
         .news-header-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 400; color: var(--text-dark); margin: 10px 0 0 0; letter-spacing: -0.02em; line-height: 1.1; }
         .news-header-text p { color: #64748b; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin: 0; }
@@ -718,22 +718,21 @@
     </section>
 
     <!-- UPDATED: About Us / Editorial Section (Replaces generic Manifesto) -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <div class="section-eyebrow">About Best Ever Medical</div>
-                <h2 class="highlight-text" id="manifesto-text">
+
+    <section class="about-section" style="padding: 120px 5vw; background-color: var(--bg-cream);">
+        <div class="about-container" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            
+            <div class="about-content" style="width: 100%;">
+                <div class="section-eyebrow" style="justify-content: center; margin-bottom: 30px;">About Best Ever Medical</div>
+                
+                <h2 class="highlight-text" id="manifesto-text" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 54px); line-height: 1.2; font-weight: 300; color: var(--primary-dark); margin: 0;">
                     We believe in authentic products and transparent pricing. By combining direct manufacturer supply with world-class clinical training, we empower clinics to elevate patient care and grow their practice.
                 </h2>
-                <a href="about.html" class="btn-outline-dark" style="margin-top: 20px;">Read Our Story</a>
+                
+                <a href="about.html" class="btn-outline-dark" style="margin-top: 40px; display: inline-flex;">Read Our Story</a>
             </div>
             
-            <div class="about-images">
-                <!-- Using real client images with parallax effect -->
-                <img src="https://www.newmenweb.com/images/Dr-Hnin-and-Best-Ever-Medical.webp" class="about-img-1" alt="Dr Hnin and Best Ever Medical">
-                <img src="https://www.newmenweb.com/images/Doctor-A-Aesthetic-Luxury-Boutique-and-Best-Ever-Medical.webp" class="about-img-2" alt="Doctor A Aesthetic Luxury Boutique and Best Ever Medical">
             </div>
-        </div>
     </section>
 
     <section class="certification-section" id="cert-hub">
@@ -883,105 +882,6 @@
                     <p>Unlock exclusive access to masterclasses with global aesthetic experts, comprehensive marketing assets, and on-demand clinical protocol guidance from certified medical professionals.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <div class="testimonials-header">
-            <p>Partner Success</p>
-            <h2>The industry has spoken<br>(and it loves BEM).</h2>
-        </div>
-
-        <div class="testimonials-nav">
-            <div class="nav-btn" id="prev-testimonial">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="nav-btn" id="next-testimonial">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-        </div>
-
-        <div class="testimonials-slider" id="testimonials-slider">
-            <div class="testimonial-card">
-                <div class="tc-image-wrapper">
-                    <img src="https://newmenweb.com/images/Dr-Yin-Hnin-Nge-So-Young-Clinic.webp" alt="Dr. Yin Hnin Nge" class="tc-image">
-                </div>
-                <div class="tc-content">
-                    <blockquote class="tc-quote">
-                        "Best Ever Medical consistently empowers our clinic with advanced technology and FDA-approved, premium products. Their reliable supply allows us to deliver exceptional patient care."
-                    </blockquote>
-                    <div class="tc-author">
-                        <strong>Dr. Yin Hnin Nge</strong>
-                        <span>Medical Director, So Young Aesthetics Clinic</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="tc-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop" alt="Dr. James Chen" class="tc-image">
-                </div>
-                <div class="tc-content">
-                    <blockquote class="tc-quote">
-                        "I love that BEM gives us a dedicated account manager. It doesn't require us to keep chasing down suppliers or worrying about cold-chain logistics anymore."
-                    </blockquote>
-                    <div class="tc-author">
-                        <strong>Dr. James Chen</strong>
-                        <span>Founder, DermaCare Medispa</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="tc-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop" alt="Dr. Samantha Wati" class="tc-image">
-                </div>
-                <div class="tc-content">
-                    <blockquote class="tc-quote">
-                        "We are always focused on enhancing the patient journey. BEM not only drives incredible value, but their masterclasses truly empower our clinical staff."
-                    </blockquote>
-                    <div class="tc-author">
-                        <strong>Dr. Samantha Wati</strong>
-                        <span>Medical Director, Lumière Clinic</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="tc-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=800&auto=format&fit=crop" alt="Dr. Michael Lee" class="tc-image">
-                </div>
-                <div class="tc-content">
-                    <blockquote class="tc-quote">
-                        "Their 24-hour fulfillment and strict cold-chain protocols give me absolute peace of mind. We've never had a delay on our core stock since partnering."
-                    </blockquote>
-                    <div class="tc-author">
-                        <strong>Dr. Michael Lee</strong>
-                        <span>Aesthetic Surgeon, The Glow Clinic</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="tc-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=800&auto=format&fit=crop" alt="Dr. Sarah Jenkins" class="tc-image">
-                </div>
-                <div class="tc-content">
-                    <blockquote class="tc-quote">
-                        "The quality of the IV Therapy solutions provided by BEM is unparalleled. Our patients consistently report feeling rejuvenated, and it has elevated our entire practice."
-                    </blockquote>
-                    <div class="tc-author">
-                        <strong>Dr. Sarah Jenkins</strong>
-                        <span>Owner, Skin & Body Aesthetics</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="drag-hint">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Drag to explore
-            <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
     </section>
 
